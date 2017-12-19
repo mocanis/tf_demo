@@ -10,4 +10,4 @@ init = tf.global_variables_initializer()
 sess = tf.Session()
 sess.run(init)
 sess.run(update)
-print(sess.run(state))
+print(sess.run(state))#要取得tf的variable的值必须用sess.run

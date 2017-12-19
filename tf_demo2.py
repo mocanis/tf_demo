@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-x = np.random.rand(100).astype(np.float32)
+x = np.random.rand(100).astype(np.float32)#生成100个数,[0, 1)上均匀分布
 y = x * 0.1 + 0.3
 
 W = tf.Variable(tf.random_uniform([1], -1.0, 0))
@@ -19,4 +19,6 @@ session.run(init)
 for step in range(201):
     session.run(train)
     if step % 20 == 0:
-        print(step, session.run(W), session.run(b))
+        global x
+        # print(x)
+        #print(step, session.run(W), session.run(b))

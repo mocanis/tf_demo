@@ -20,5 +20,6 @@ for step in range(201):
     session.run(train)
     if step % 20 == 0:
         global x
-        # print(x)
-        #print(step, session.run(W), session.run(b))
+        print(x)
+        print("----------------------")
+        print(step, session.run(W), session.run(b))
